@@ -3,7 +3,7 @@ import React from 'react'
 export default function Header() {
     return (
         <div>
-            <header className="app-header">
+            <header className="border-b font-bold">
                 AppName
             </header>
         </div>
