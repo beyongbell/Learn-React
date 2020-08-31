@@ -1,34 +1,30 @@
-import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import "./App.css";
-import Header from "./Components/Header";
-import Footer from "./Components/Footer";
-import Home from './views/Home'
-import About from './views/About'
-import Todo from './views/Todo'
-import Photo from './views/Photo'
-
-// import CounterExample from './Components/CounterExample'
-
+import React from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom"
+import Header from './Components/Header'
+import Footer from './Components/Footer'
+import Home from './Views/Home'
+import About from './Views/About'
+import Product from './Views/Product'
 
 function App() {
   return (
-    <div>
+    <div className="relative pb-10 min-h-screen">
       <Router>
         <Header />
         <div className="p-3">
         <Switch>
           <Route exact path="/">
-            <Home/>
+            <Home />
           </Route>
           <Route path="/about">
-            <About/>
+            <About />
           </Route>
-          <Route path="/todo/:id">
-            <Todo/>
-          </Route>
-          <Route path="/photo/:id">
-            <Photo/>
+          <Route path="/products/:id">
+            <Product />
           </Route>
         </Switch>
         </div>

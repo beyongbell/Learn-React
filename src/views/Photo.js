@@ -6,7 +6,7 @@ import Loader from '../Components/Loader'
 export default function Photo() {
     const { id } = useParams()
     const url = `https://jsonplaceholder.typicode.com/photos/${id}`
-    const [photo, setTodo] = useState({
+    const [photo, setPhoto] = useState({
         loading: false,
         data: null,
         error: false
@@ -15,20 +15,20 @@ export default function Photo() {
     let content = null
 
     useEffect(() => {
-        setTodo({
+        setPhoto({
             loading: true,
             data: null,
             error: false
         })
         axios.get(url).then(response => {
-            setTodo({
+            setPhoto({
                 loading: false,
                 data: response.data,
                 error: false
             })
         })
         .catch(() => {
-            setTodo({
+            setPhoto({
                 loading: false,
                 data: null,
                 error: true
