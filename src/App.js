@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Header   from './Components/Header'
 import HelloWorld   from './Components/HelloWorld'
+import Footer   from './Components/Footer'
 // import CounterExample from './Components/CounterExample'
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
     <div>
       <Header />
       <HelloWorld name="Tinnakorn"/>
+      <Footer />
     </div>
   );
 }
