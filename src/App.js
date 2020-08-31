@@ -5,6 +5,7 @@ import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import Home from './views/Home'
 import About from './views/About'
+import Todo from './views/Todo'
 
 // import CounterExample from './Components/CounterExample'
 
@@ -21,6 +22,9 @@ function App() {
           </Route>
           <Route path="/about">
             <About/>
+          </Route>
+          <Route path="/todo/:id">
+            <Todo/>
           </Route>
         </Switch>
         </div>
